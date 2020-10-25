@@ -19,13 +19,17 @@ while run_game
 		puts "Nem jo szamot irtal be: #{player_input}"
 	end
 		
-	puts "Beirtad: #{player_number}"
 	if player_number == secret_number
 		puts "Ugyes vagy! Kitalaltad a szamot: #{secret_number}"
 		run_game = false
-	elsif player_number < secret_number
-		puts "Tul kicsi!"
 	else
-		puts "Tul nagy!"
+		puts "Sajnos nem talaltad ki a szamot :("
+		print "A #{player_number} tul "
+		if player_number < secret_number
+			print "kicsi"
+		else
+			print "nagy"
+		end
+		puts "!"
 	end
 end
