@@ -1,18 +1,18 @@
 secret_number = rand(1..100)
 
-guessing = true
+run_game = true
 
-while guessing
+while run_game
 	puts
-	print "your guess: "
-	guess = gets.to_i
+	print "Talad ki szamot: "
+	player_number = gets.to_i
 
-	if guess == secret_number
-		puts "Congratulations! You won!"
-		guessing = false
-	elsif guess < secret_number
-		puts "Too low.."
+	if player_number == secret_number
+		puts "Ugyes vagy! Kitalaltad a szamot"
+		run_game = false
+	elsif player_number < secret_number
+		puts "Tul kicsi!"
 	else
-		puts "Too high ..."
+		puts "Tul nagy!"
 	end
 end
